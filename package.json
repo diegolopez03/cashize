@@ -1,0 +1,35 @@
+{
+  "name": "marketplace",
+  "version": "1.0.0",
+  "description": "MarketPlace",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ./index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/diegolopez03/cashize.git"
+  },
+  "keywords": [
+    "node",
+    "handlebars",
+    "mongoose",
+    "bootstrap",
+    "MVC"
+  ],
+  "author": "Diego López",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/diegolopez03/cashize/issues"
+  },
+  "homepage": "https://github.com/diegolopez03/cashize#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^5.1.0",
+    "mongoose": "^5.10.9"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
