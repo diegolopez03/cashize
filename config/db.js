@@ -4,8 +4,8 @@ require("dotenv").config({ path: ".env" });
 
 //Configuración de Mongoose 
 mongoose.connect(process.env.DATABASE, {
-    useNewUrlParser = true,
-    useUnifiedTopology = true
+    useNewUrlParser : true,
+    useUnifiedTopology : true
 });
 
 //Iniciar la conexión al servidor cloud mongo
