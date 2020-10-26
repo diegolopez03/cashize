@@ -8,6 +8,19 @@ exports.formularioCrearCuenta = (req, res, next) =>{
 }
 
 //Procesar el formulario de creación de cuenta 
-exports.crearCuenta = (req, res, next) => {
-    
+exports.crearCuenta = async (req, res, next) => {
+    //Obtener las variables desde el cuerpo de la peticón 
+    const { nombre, email, password } = req.body;
+
+    //Intentar almacenar los datos del usuario
+    try {
+        //Crear el usuario
+        await Usuario.create({
+            email,
+            password,
+            nombre
+        });
+    } catch (error) {
+        console.log(error);
+    }
 }
