@@ -75,7 +75,7 @@ usuarioSchema.pre("save", function(next) {
 usuarioSchema.methods.comparePassword = function(candidatePassword) {
     const user = this;
 
-    return Promise((resolve, reject) => {
+    return new Promise((resolve, reject) => {
         //Comparar el password candidato con el password almacenado
         bcrypt.compare(candidatePassword, user.password, (err, isMatch) =>{
             //Promesa incumplida
