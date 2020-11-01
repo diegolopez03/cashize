@@ -2,7 +2,6 @@
 const passport = require("passport");
 const localStrategy = require("passport-local").Strategy;
 const mongoose = require("mongoose");
-const { findById } = require("../models/Usuario");
 const Usuario = mongoose.model("Usuarios");
 
 //Configurar la estrategia local de autenticación 
@@ -45,7 +44,7 @@ passport.serializeUser((usuario, done) => done(null, usuario._id ));
 //Deserializar el usuario desde la sesión 
 passport.deserializeUser(async (id, done) => {
    try {
-    const usuario = await findById(id).exec();
+    const usuario = await Usuario.findById(id).exec();
 
     return done(null, usuario);
    } catch (error) {
