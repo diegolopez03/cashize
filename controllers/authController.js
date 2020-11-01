@@ -11,3 +11,13 @@ exports.autenticarUsuario = passport.authenticate("local", {
     badRequestMessage: ["Debes ingresar tus credenciales"],
 });
 
+//Cerrar la sesion del usuario
+exports.cerrarSesion = (req, res, next) => {
+    //Cerrar la sesion 
+    req.logout();
+
+    req.flash("succes", ["Has cerrado correctamente tu sesón",]);
+
+    return res.redirect("/iniciar-sesion");
+}
+
